@@ -33,7 +33,11 @@ while (userInput !== "CLOSE") {
             showTasks += (tasks[i]+'\n') ;
         }
         alert(showTasks)
-      }
+    }else{
+       newTask = prompt(`Please enter the new task:`);
+       tasks.push(newTask)
+       alert(`Task has been added!!`)
+    }
     userInput = prompt(menu);
     // this break can be commented out after the close feature is complete
     break;
