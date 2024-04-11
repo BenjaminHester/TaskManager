@@ -33,14 +33,16 @@ while (userInput !== "CLOSE") {
             showTasks += (tasks[i]+'\n') ;
         }
         alert(showTasks)
-    }else{
+        showTasks = ``
+        userInput = prompt(menu)
+    }
+    if(userInput == "NEW") {
        newTask = prompt(`Please enter the new task:`);
        tasks.push(newTask)
        alert(`Task has been added!!`)
     }
     userInput = prompt(menu);
     // this break can be commented out after the close feature is complete
-    break;
 };
 // alerts the user that they have closed the program
 alert(`Thank you for using Task Manager`)
