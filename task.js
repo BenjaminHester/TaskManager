@@ -41,6 +41,14 @@ while (userInput !== "CLOSE") {
        tasks.push(newTask)
        alert(`Task has been added!!`)
     }
+    if (userInput == "REMOVE") {
+        showTasks = ''
+        for(var i = 0; i < tasks.length; i++){
+            showTasks += (i+1 + ':' + tasks[i]+'\n') ;
+        }
+        userInput = prompt('Please enter a number to remove:\n' + showTasks)
+        tasks.splice(userInput-1,1);
+      }
     userInput = prompt(menu);
     // this break can be commented out after the close feature is complete
 };
